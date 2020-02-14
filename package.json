@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/salikovskiy/javascript-project-goit.git"
+    "url": "git+https://github.com/monarchinit/shopbulo.git"
   },
   "keywords": [],
-  "author": "Alexander Salikovskiy <ssalikovskiy@gmail.com>",
+  "author": "Yaroslav Lototskyi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/salikovskiy/javascript-project-goit/issues"
+    "url": "https://github.com/monarchinit/shopbulo/issues"
   },
-  "homepage": "https://github.com/salikovskiy/javascript-project-goit#readme",
+  "homepage": "https://github.com/monarchinit/shopbulo",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",

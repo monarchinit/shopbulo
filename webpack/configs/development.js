@@ -16,7 +16,7 @@ module.exports = env => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: '../src/public/index.html',
+      template: '../src/index.html',
     }),
   ],
   devServer: {

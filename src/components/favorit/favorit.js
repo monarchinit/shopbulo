@@ -2,7 +2,7 @@ import services from '../../services/services.js';
 import './favorit.css';
 import PNotify from 'pnotify/dist/es/PNotify.js';
 import 'pnotify/dist/PNotifyBrightTheme.css';
-import ModalPnotify from '../modalPnotify/ModalPnotify';
+import ModalPnotify from '../modalPnotify/ModalPnotify'
 
 document.body.addEventListener('click', createdFavoritCard);
 
@@ -11,7 +11,7 @@ function createdFavoritCard(e) {
     if (localStorage.getItem('token')) {
       services.getAllProductFavorite().then(cards => {
         let flag = false;
-        // console.log(e.target);
+        console.log(e.target);
         cards.map(elem => {
           if (ourEventId === elem._id) {
             flag = true;
@@ -21,7 +21,7 @@ function createdFavoritCard(e) {
         if (flag) {
           e.target.classList.remove('addedToFavorite');
           services.deletedFavoritCardById(ourEventId);
-          ModalPnotify('О ні !', 'Як я міг Вам не сподобатися ?', 'red');
+          ModalPnotify('О ні !','Як я міг Вам не сподобатися ?',"red")
           // PNotify.error({
           //   title: 'О ні !',
           //   text: 'Як я міг Вам не сподобатися ?',
@@ -33,19 +33,11 @@ function createdFavoritCard(e) {
           //   title: 'Мені це подобається!',
           //   text: 'Добавляю цю карту в моЇ обрані .',
           // });
-          ModalPnotify(
-            'Мені це подобається!',
-            'Добавляю цю карту в моЇ обрані .',
-            'green',
-          );
+          ModalPnotify('Мені це подобається!','Добавляю цю карту в моЇ обрані .',"green")
         }
       });
     } else {
-      ModalPnotify(
-        'О ні !',
-        'Будь-ласка, для добавлення в обрані, зареєструйтесь або увійдіть в свій аккаунт !',
-        'red',
-      );
+      ModalPnotify('О ні !','Будь-ласка, для добавлення в обрані, зареєструйтесь або увійдіть в свій аккаунт !',"red")
       // PNotify.error({
       //   title: 'О ні !',
       //   text:
